@@ -15,6 +15,8 @@ import { BusesComponent } from './admin/buses/buses.component';
 import { DriversComponent } from './admin/drivers/drivers.component';
 import { UserProfileComponent } from './admin/user-profile/user-profile.component';
 import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
+import { UpdateUserComponent } from './admin/update-user/update-user.component';
+import { UpdateDriverComponent } from './admin/update-driver/update-driver.component';
 import { AddBusComponent } from './admin/add-bus/add-bus.component';
 
 
@@ -35,8 +37,11 @@ const routes: Routes = [
   { path: 'buses', component: BusesComponent},
   { path: 'drivers', component: DriversComponent},
   { path: 'user-profile', component: UserProfileComponent},
-  { path:'add-bus', component: AddBusComponent},
   {path:'update-bus/:id', component:UpdateBusComponent},
+  {path:'update-user/:id', component:UpdateUserComponent},
+  {path:'update-driver/:id', component:UpdateDriverComponent},
+  {path:'add-bus', component:AddBusComponent},
+
   ]
 },
   ]

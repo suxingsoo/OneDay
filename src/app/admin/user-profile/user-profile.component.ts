@@ -29,10 +29,13 @@ export class UserProfileComponent implements OnInit {
       console.log(users);
     })
   }
+  update(id){
+    this.router.navigate(['/admin/update-user/'+id]);
+  }
 
   deleteUser(id){
-    axios.post("https://btal-ride.herokuapp.com/api/admin/client"+id).then(res => {
-      return this.router.navigate(['/admin/dashboard']);
+    axios.delete("https://btal-ride.herokuapp.com/api/admin/client/"+id).then(res => {
+      return this.router.navigate(['/admin']);
     }).catch(err => {
       console.log(err)
     })
