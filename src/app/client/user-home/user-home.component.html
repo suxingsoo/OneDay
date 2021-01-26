@@ -30,37 +30,49 @@
 <br>
 
 
-<div class="img-area mt-5 col-md-6">
+<!-- <div class="img-area mt-5 col-md-6">
         <div class="img-area" *ngFor="let bus of buses">
             <div class="single-img" data-toggle="modal" data-target="#bus1">
                     {{bus.bus_name}} <img src="{{bus.img_url}}" alt="bus1" width="250px">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="container p-3 mt-2">
         <div class="row">
-            <div class="card col-md-4">
-                <img src="" alt="card" class="card-img-top">
+            <div class="card col-md-4 shadow p-3 rounded" *ngFor="let bus of buses">
+                <img src="{{bus.img_url}}" alt="card" class="card-img-top">
                 <div class="card-body">
-                    <p class="h2">Title</p>
-                    <p class="h4">Description</p>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-6">
-                                <!-- <mdb-icon fas icon="users"></mdb-icon>                            </div> -->
-                        <div class="col-md-6">
-                                <!-- <span class="material-icons">credit_card</span> -->
-                        </div>
+                    <p class="h2">{{bus.bus_name}}</p>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Details >>></button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class=" modal-title text-center" id="exampleModalLabel">{{bus.bus_name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Description: {{bus.description}}</p>
+                        <p>No of seats: {{bus.status}}</p>
+                        <p>Price: {{bus.price}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a routerLink="/client/login" type="button" class="btn btn-primary">Book Now</a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
+        </div>
+            </div>
 
         </div>
-
     </div>
 
-
+<br>
 <div class="container p-3 shadow p-3 mb-5 rounded"> 
     <p class="h2 text-center font-weight-bold">Reserve your Trip</p>
     <form action="" method="post">

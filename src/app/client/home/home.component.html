@@ -72,9 +72,9 @@
 <div class="row">
     <!-- for(i = 0; i<4; i++) -->
     <!-- for each -->
-    <div class="column shadow p-3 mb-5 bg-white rounded" *ngFor="let bus of buses" >
+    <div class="column shadow p-3 m-1 bg-white rounded" *ngFor="let bus of buses" >
         <h4>{{bus.bus_name}}</h4>
-        <img class="img-responsive" src="{{bus.img_url}}" style="width:100%">
+        <img class="img-responsive" id="images" src="{{bus.img_url}}">
         <!-- <p>Airconated bus with big space and comfortable leather chain...</p> -->
         <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Details >>></button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
