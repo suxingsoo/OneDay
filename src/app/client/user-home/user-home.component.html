@@ -1,0 +1,109 @@
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border border-light bg-light" routerLink="/"><img src="../../assets/images/logo.png" height="40px" width="100%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <div class="dropdown">
+                    <button id="admn" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="true" aria-expanded="false">
+                      User
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Buses -->
+<div class="parallax text-center ">
+    <p class="display-1 font-weight-bold">Our Buses</p>
+    <p class="h3">Travel in our Care</p>
+</div>
+<br>
+
+<!-- Booking Form -->
+<br>
+
+
+<div class="img-area mt-5 col-md-6">
+        <div class="img-area" *ngFor="let bus of buses">
+            <div class="single-img" data-toggle="modal" data-target="#bus1">
+                    {{bus.bus_name}} <img src="{{bus.img_url}}" alt="bus1" width="250px">
+            </div>
+        </div>
+    </div>
+
+    <div class="container p-3 mt-2">
+        <div class="row">
+            <div class="card col-md-4">
+                <img src="" alt="card" class="card-img-top">
+                <div class="card-body">
+                    <p class="h2">Title</p>
+                    <p class="h4">Description</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <!-- <mdb-icon fas icon="users"></mdb-icon>                            </div> -->
+                        <div class="col-md-6">
+                                <!-- <span class="material-icons">credit_card</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<div class="container p-3 shadow p-3 mb-5 rounded"> 
+    <p class="h2 text-center font-weight-bold">Reserve your Trip</p>
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="bus_name">Bus Name</label>
+            <select name="choice" id="" class="form-control">
+                <option value="1">Bus Blue</option>
+                <option value="2">Bus Red</option>
+                <option value="3">Bus Yellow</option>
+                <option value="4">Bus Black</option>
+
+            </select>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="sdate">Start Date</label>
+                <input type="date" name="sdate" id="" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="edate">End Date</label>
+                <input type="date" name="edate" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="price">Price</label>
+                    <input type="number" disabled name="price" id="" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="payment">Payment Method</label>
+                    <select name="payment" id="" class="form-control">
+                        <option value="COD">Cash on Delivery</option>
+                        <option value="Paypay">Paypal</option>
+                        <option value="Paymaya">Paymaya</option>
+                    </select>
+                </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Book" class="btn btn-success btn-block">
+        </div>
+    </form>
+</div>
+<br>
+
+<app-footer></app-footer>
