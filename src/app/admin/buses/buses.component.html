@@ -1,19 +1,37 @@
 <div class="wrapper">
 
+    <!-- Message Alert -->
+    <div class="alert" role="alert" *ngIf=" hidden">
+        <strong>Wait a sec.!</strong> Are you sure you want to Delete?
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <hr>
+        <button>Delete</button>
+        <button>Cancel</button>
+    </div>
+
     <!-- Gallery -->
     <div class="img-area">
         <div class="single-img" data-toggle="modal" data-target="#addNewBus">
-            <h2>Add New Bus</h2><img src="../../../assets/images/plus.png" alt="Add New Bus" width="250px">
+            <h2>Add New Bus</h2><img src="../../../assets/images/plus.png" alt="Add New Bus" width="250px" routerLink="admin/add-bus">
         </div>
     </div>
-
-
 
     <div class="img-area mt-5">
         <div class="img-area" *ngFor="let bus of buses">
             <div class="single-img" data-toggle="modal" data-target="#bus1">
-                <img src="{{bus.img_url}}" alt="bus1" width="250px" (click) = "update(bus.id)">
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-bars"></i></button>
+                    <div class="dropdown-content">
+                        <a routerLink="admin/bus-specs">View</a>
+                        <a (click)="deleteMsg()">Delete</a>
+                        <a routerLink="admin/update-bus/:id">Update</a>
+                    </div>
+                </div>
+                <img src="{{bus.img_url}}" alt="bus1" width="250px" (click)="update(bus.id)">
                 <h5>{{bus.bus_name}}</h5>
             </div>
         </div>
     </div>
+</div>

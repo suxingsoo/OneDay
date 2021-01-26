@@ -21,6 +21,7 @@ import { UserProfileComponent } from './admin/user-profile/user-profile.componen
 import { AddDriverComponent } from './admin/add-driver/add-driver.component';
 import { AddBusComponent } from './admin/add-bus/add-bus.component';
 import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
+import { BusSpecsComponent } from './admin/bus-specs/bus-specs.component';
 // import {MatIconModule} from '@angular/material/icon';
 
 
@@ -44,6 +45,7 @@ import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
     AddDriverComponent,
     AddBusComponent,
     UpdateBusComponent,
+    BusSpecsComponent,
   
   ],
   imports: [
