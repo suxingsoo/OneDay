@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'admin/user-profile', component: UserProfileComponent},
   { path:'admin/add-bus', component: AddBusComponent},
   {path:'admin/update-bus/:id', component:UpdateBusComponent},
+  
 
 ]
 

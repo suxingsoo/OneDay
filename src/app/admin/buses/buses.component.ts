@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../../services/models';
-// import { BookingsService } from 'src/app/services/bookings.service';
 import { BusesService  } from '../../services/buses.service'
 import { Router } from '@angular/router';
 import axios from 'axios';
 import {MatDialog} from '@angular/material/'
-
 
 
 @Component({
@@ -25,6 +23,10 @@ export class BusesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBuses()
+  }
+hidden = false;
+  deleteMsg(){
+this.hidden = !this.hidden;
   }
 
   getBuses(){
