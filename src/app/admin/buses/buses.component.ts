@@ -3,7 +3,7 @@ import { Bus } from '../../services/models';
 // import { BookingsService } from 'src/app/services/bookings.service';
 import { BusesService  } from '../../services/buses.service'
 import { Router } from '@angular/router';
-
+import axios from 'axios';
 
 
 @Component({
@@ -32,6 +32,16 @@ export class BusesComponent implements OnInit {
   }
   update(id){
     this.router.navigate(['/admin/update-bus/'+id]);
+  }
+  addBus(){
+    this.router.navigate(['/admin/add-bus']);
+  }
+  delete(id){
+    axios.delete("https://btal-ride.herokuapp.com/api/admin/bus"+id).then(res => {
+      this.router.navigate(['/admin/buses']);
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
 }
