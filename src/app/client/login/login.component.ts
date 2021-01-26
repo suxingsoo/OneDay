@@ -28,12 +28,13 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log(this.form.value);
+    document.getElementById('spinner').style.display = "block";
     axios.post("https://btal-ride.herokuapp.com/api/client/login", this.form.value).then(res => {
+      document.getElementById('spinner').style.display = "none";
       this.router.navigate(['/userhome']);
       console.log(this.form.value);
     }).catch(err => {
-      console.log(err)
+      alert(err);
     })
   }
 
