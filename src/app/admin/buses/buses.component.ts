@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Bus } from '../../services/models';
 import { BusesService  } from '../../services/buses.service'
 import { Router } from '@angular/router';
-
+import axios from 'axios';
 
 @Component({
   selector: 'app-buses',
@@ -34,6 +34,16 @@ this.hidden = !this.hidden;
   }
   update(id){
     this.router.navigate(['/admin/update-bus/'+id]);
+  }
+  addBus(){
+    this.router.navigate(['/admin/add-bus']);
+  }
+  delete(id){
+    axios.delete("https://btal-ride.herokuapp.com/api/admin/bus"+id).then(res => {
+      this.router.navigate(['/admin/buses']);
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
 }

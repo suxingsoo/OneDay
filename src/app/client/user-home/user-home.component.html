@@ -38,6 +38,7 @@
         </div>
     </div> -->
 
+<<<<<<< HEAD
 <div class="container p-3 mt-2">
     <div class="row">
         <div class="card col-md-4 shadow p-3 rounded" *ngFor="let bus of buses">
@@ -63,19 +64,54 @@
                         <div class="modal-footer">
                             <a routerLink="/client/login" type="button" class="btn btn-primary">Book Now</a>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+=======
+    <div class="container p-3 m-5">
+        <div class="row">
+            <div class="card col-sm-4 shadow p-3 rounded" *ngFor="let bus of buses">
+                <img src="{{bus.img_url}}" alt="card" class="card-img-top">
+                <div class="card-body">
+                    <p class="h2">{{bus.bus_name}}</p>
+                </div>
+                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Details >>></button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                                <h5 class=" modal-title text-center" id="exampleModalLabel">{{bus.bus_name}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Description:  {{bus.description}}</p>
+                                <p>No of seats:  {{bus.number_of_seat}}</p>
+                                <p>Price:  {{bus.price}}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="/userhome/#form" type="button" class="btn btn-primary">Book Now</a>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+>>>>>>> aa779308a729925744ada1f94f180bec0b086070
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
 
     </div>
 </div>
 
 <br>
 <div class="container p-3 shadow p-3 mb-5 rounded">
+=======
+    </div>
+    <br>
+<br>
+<div class="container p-3 shadow p-3 mb-5 rounded" id="form"> 
+>>>>>>> aa779308a729925744ada1f94f180bec0b086070
     <p class="h2 text-center font-weight-bold">Reserve your Trip</p>
-    <form action="" method="post">
+    <form name="form">
         <div class="form-group">
             <label for="bus_name">Bus Name</label>
             <select name="choice" id="" class="form-control">

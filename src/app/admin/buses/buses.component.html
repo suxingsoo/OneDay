@@ -13,14 +13,30 @@
 
     <!-- Gallery -->
     <div class="img-area">
+<<<<<<< HEAD
         <div class="single-img" data-toggle="modal" data-target="#addNewBus">
             <h2>Add New Bus</h2><img src="../../../assets/images/plus.png" alt="Add New Bus" width="250px" routerLink="admin/add-bus">
         </div>
     </div>
 
+=======
+            <button (click)="addBus()">Add New Button</button>
+    </div>
+>>>>>>> aa779308a729925744ada1f94f180bec0b086070
     <div class="img-area mt-5">
         <div class="img-area" *ngFor="let bus of buses">
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Action
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">View</a>
+                  <a class="dropdown-item" (click) = "update(bus.id)">Edit</a>
+                  <a class="dropdown-item" (click) = "delete(bus.id)">Delete</a>
+                </div>
+              </div>
             <div class="single-img" data-toggle="modal" data-target="#bus1">
+<<<<<<< HEAD
                 <div class="dropdown">
                     <button class="dropbtn"><i class="fas fa-bars"></i></button>
                     <div class="dropdown-content">
@@ -30,6 +46,9 @@
                     </div>
                 </div>
                 <img src="{{bus.img_url}}" alt="bus1" width="250px" (click)="update(bus.id)">
+=======
+                <img src="{{bus.img_url}}" alt="bus1" width="250px" >
+>>>>>>> aa779308a729925744ada1f94f180bec0b086070
                 <h5>{{bus.bus_name}}</h5>
             </div>
         </div>
