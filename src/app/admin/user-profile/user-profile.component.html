@@ -12,8 +12,8 @@
             <td>{{user.firstname }}{{user.lastname}}</td>
             <th scope="row">{{user.contact_number}}</th>
             <td>{{user.address}}</td>
-            <td><button>Update</button>
-                <button (click)="deleteUser(user)">Delete</button></td>
+            <td><button class="btn btn-primary" (click)="update(id)">Update</button>
+                <button class="btn btn-danger" style="margin-left:20px;" (click)="deleteUser(id)">Delete</button></td>
         </tr>
     </tbody>
 </table>

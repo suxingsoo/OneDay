@@ -31,7 +31,7 @@ const routes: Routes = [
   { path:'admin/register',component:AdminregisterComponent},
   { path:'admin', component: NavbarComponent,
   children:[
-    { path: 'bookings', component: BookingsComponent},
+  { path: 'bookings', component: BookingsComponent},
   { path: 'buses', component: BusesComponent},
   { path: 'drivers', component: DriversComponent},
   { path: 'user-profile', component: UserProfileComponent},
