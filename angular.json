@@ -120,13 +120,8 @@
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "angularSpecialization",
+  "defaultProject": "angular-specialization",
   "cli": {
-    "analytics": "18b5af23-533f-4da0-a5e0-66cd2cc83739"
+    "analytics": "1d17497a-61e3-42a0-9a06-81900eec491a"
   }
 }
-=======
-  "defaultProject": "angular-specialization"
-}
->>>>>>> fd1d5bf4d08cabcb7586957bcb19ac18f0dff675
