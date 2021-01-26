@@ -3,7 +3,7 @@ import { Bus } from '../../services/models';
 import { BusesService  } from '../../services/buses.service'
 import { Router } from '@angular/router';
 import axios from 'axios';
-import {MatDialog} from '@angular/material/'
+// import {MatDialog} from '@angular/material/'
 
 
 @Component({
@@ -18,7 +18,7 @@ export class BusesComponent implements OnInit {
   constructor(
     private busesService: BusesService,
     private router :Router,
-    public dialog: MatDialog
+    // public dialog: MatDialog
     ) { }
 
   ngOnInit(): void {
@@ -49,14 +49,14 @@ this.hidden = !this.hidden;
     })
   }
 
-  delDialog(){
-    const delText = this.dialog.open(BusDialog)
-  }
+  // delDialog(){
+  //   const delText = this.dialog.open(BusDialog)
+  // }
 }
 
-@Component({
-  selector: 'BusDialog',
-  templateUrl: 'busdialog.component.html'
-})
+// @Component({
+//   selector: 'BusDialog',
+//   templateUrl: 'busdialog.component.html'
+// })
 
-export class BusDialog{}
+// export class BusDialog{}
