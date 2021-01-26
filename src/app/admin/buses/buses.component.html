@@ -12,7 +12,7 @@
     <div class="img-area mt-5">
         <div class="img-area" *ngFor="let bus of buses">
             <div class="single-img" data-toggle="modal" data-target="#bus1">
-                <h2>Bus {{bus.id}}</h2><img src="{{bus.img_url}}" alt="bus1" width="250px">
+                <img src="{{bus.img_url}}" alt="bus1" width="250px" (click) = "update(bus.id)">
                 <h5>{{bus.bus_name}}</h5>
             </div>
         </div>

@@ -14,6 +14,9 @@ import { BookingsComponent } from './bookings/bookings.component';
 import { BusesComponent } from './admin/buses/buses.component';
 import { DriversComponent } from './admin/drivers/drivers.component';
 import { UserProfileComponent } from './admin/user-profile/user-profile.component';
+import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
+import { AddBusComponent } from './admin/add-bus/add-bus.component';
+
 
 
 const routes: Routes = [
@@ -30,7 +33,10 @@ const routes: Routes = [
   { path: 'admin/bookings', component: BookingsComponent},
   { path: 'admin/buses', component: BusesComponent},
   { path: 'admin/drivers', component: DriversComponent},
-  { path: 'admin/user-profile', component: UserProfileComponent}
+  { path: 'admin/user-profile', component: UserProfileComponent},
+  { path:'admin/add-bus', component: AddBusComponent},
+  {path:'admin/update-bus/:id', component:UpdateBusComponent},
+
 ]
 
 @NgModule({

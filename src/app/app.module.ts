@@ -19,6 +19,8 @@ import { BusesComponent } from './admin/buses/buses.component';
 import { DriversComponent } from './admin/drivers/drivers.component';
 import { UserProfileComponent } from './admin/user-profile/user-profile.component';
 import { AddDriverComponent } from './admin/add-driver/add-driver.component';
+import { AddBusComponent } from './admin/add-bus/add-bus.component';
+import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
 // import {MatIconModule} from '@angular/material/icon';
 
 
@@ -40,6 +42,8 @@ import { AddDriverComponent } from './admin/add-driver/add-driver.component';
     DriversComponent,
     UserProfileComponent,
     AddDriverComponent,
+    AddBusComponent,
+    UpdateBusComponent,
   
   ],
   imports: [
