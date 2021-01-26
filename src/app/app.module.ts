@@ -21,10 +21,8 @@ import { UserProfileComponent } from './admin/user-profile/user-profile.componen
 import { AddDriverComponent } from './admin/add-driver/add-driver.component';
 import { AddBusComponent } from './admin/add-bus/add-bus.component';
 import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {MatIconModule} from '@angular/material/icon';
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +42,6 @@ import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
     AddDriverComponent,
     AddBusComponent,
     UpdateBusComponent,
-  
   ],
   imports: [
     BrowserModule,
@@ -52,6 +49,7 @@ import { UpdateBusComponent } from './admin/update-bus/update-bus.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     // MatIconModule
   ],
   providers: [],

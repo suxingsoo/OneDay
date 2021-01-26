@@ -29,15 +29,17 @@ const routes: Routes = [
   { path:'userhome', component:UserHomeComponent},
   { path: 'admin/login',component:AdminloginComponent },
   { path:'admin/register',component:AdminregisterComponent},
-  { path:'admin/dashboard', component: NavbarComponent},
-  { path: 'admin/bookings', component: BookingsComponent},
-  { path: 'admin/buses', component: BusesComponent},
-  { path: 'admin/drivers', component: DriversComponent},
-  { path: 'admin/user-profile', component: UserProfileComponent},
-  { path:'admin/add-bus', component: AddBusComponent},
-  {path:'admin/update-bus/:id', component:UpdateBusComponent},
-
-]
+  { path:'admin', component: NavbarComponent,
+  children:[
+    { path: 'bookings', component: BookingsComponent},
+  { path: 'buses', component: BusesComponent},
+  { path: 'drivers', component: DriversComponent},
+  { path: 'user-profile', component: UserProfileComponent},
+  { path:'add-bus', component: AddBusComponent},
+  {path:'update-bus/:id', component:UpdateBusComponent},
+  ]
+},
+  ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -38,7 +38,7 @@ export class BusesComponent implements OnInit {
   }
   delete(id){
     axios.delete("https://btal-ride.herokuapp.com/api/admin/bus"+id).then(res => {
-      this.router.navigate(['/admin/buses']);
+      this.router.navigate(['/admin/dashboard']);
     }).catch(err => {
       console.log(err)
     })

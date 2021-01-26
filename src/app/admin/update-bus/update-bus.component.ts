@@ -36,7 +36,7 @@ export class UpdateBusComponent implements OnInit {
   updateBus(){
     console.log(this.id);
     axios.put("https://btal-ride.herokuapp.com/api/admin/bus/"+this.id, this.form.value).then(res => {
-      this.router.navigate(['/admin/buses']);
+      this.router.navigate(['/admin/dashboard']);
     }).catch(err => {
       console.log(err)
     })
