@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "angular-specialization"
+  "defaultProject": "angular-specialization",
+  "cli": {
+    "analytics": "1d17497a-61e3-42a0-9a06-81900eec491a"
+  }
 }

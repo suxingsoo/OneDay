@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../../services/models';
-// import { BookingsService } from 'src/app/services/bookings.service';
 import { BusesService  } from '../../services/buses.service'
 import { Router } from '@angular/router';
 import axios from 'axios';
+// import {MatDialog} from '@angular/material/'
 
 
 @Component({
@@ -17,11 +17,16 @@ export class BusesComponent implements OnInit {
 
   constructor(
     private busesService: BusesService,
-    private router :Router
+    private router :Router,
+    // public dialog: MatDialog
     ) { }
 
   ngOnInit(): void {
     this.getBuses()
+  }
+hidden = false;
+  deleteMsg(){
+this.hidden = !this.hidden;
   }
 
   getBuses(){
@@ -44,4 +49,14 @@ export class BusesComponent implements OnInit {
     })
   }
 
+  // delDialog(){
+  //   const delText = this.dialog.open(BusDialog)
+  // }
 }
+
+// @Component({
+//   selector: 'BusDialog',
+//   templateUrl: 'busdialog.component.html'
+// })
+
+// export class BusDialog{}

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './add-bus.component.html',
   styleUrls: ['./add-bus.component.css']
 })
+
 export class AddBusComponent implements OnInit {
   form = new FormGroup({
     bus_name: new FormControl('',Validators.required),

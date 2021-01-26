@@ -29,6 +29,7 @@ const routes: Routes = [
   { path:'userhome', component:UserHomeComponent},
   { path: 'admin/login',component:AdminloginComponent },
   { path:'admin/register',component:AdminregisterComponent},
+<<<<<<< HEAD
   { path:'admin', component: NavbarComponent,
   children:[
   { path: 'bookings', component: BookingsComponent},
@@ -40,6 +41,18 @@ const routes: Routes = [
   ]
 },
   ]
+=======
+  { path:'admin/dashboard', component: NavbarComponent},
+  { path: 'admin/bookings', component: BookingsComponent},
+  { path: 'admin/buses', component: BusesComponent},
+  { path: 'admin/drivers', component: DriversComponent},
+  { path: 'admin/user-profile', component: UserProfileComponent},
+  { path:'admin/add-bus', component: AddBusComponent},
+  {path:'admin/update-bus/:id', component:UpdateBusComponent},
+  
+
+]
+>>>>>>> 04b656f304f4e096f6594efd2e5631d5eb41aa19
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
