@@ -39,7 +39,7 @@
                           </div>
                     </div>
                     <div class="card-body">
-                        <form name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+                        <form name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()" autocomplete="off">
                             <div class="form-row">
                                 <div class="form-group col-md-6 ">
                                     <label for="firstname">First Name</label>
@@ -65,11 +65,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="contact_number">Phone Number</label>
-                                <input type="text" class="form-control" formControlName="contact_number" [ngClass]="{'is-invalid':form.get('contact_number').touched && form.get('contact_number').invalid}" required>
-                                <div class="invalid-feedback">
-                                    <div>Phone Number is required</div>
+                                <input type="text" class="form-control" placeholder="09X-XXXX-XXX" formControlName="contact_number" [ngClass]="{'is-invalid':form.get('contact_number').touched && form.get('contact_number').invalid}" required>
+                                <div *ngIf="(form.get('contact_number').touched && form.get('contact_number').valid) " class="invalid-feedback">
+                                    <div *ngIf="form.get('contact_number').errors.required">Phone Number is required</div>
+                                    <div *ngIf="form.get('contact_number').errors.pattern">Invalid Phone Number</div>                            </div>
                                 </div>
-                            </div>
                             <div class="form-group">
                                 <label for="email_address">Email Address</label>
                                 <input type="email" class="form-control" formControlName="email_address" [ngClass]="{'is-invalid':form.get('email_address').touched && form.get('email_address').invalid}">
