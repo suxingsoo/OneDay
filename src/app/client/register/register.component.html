@@ -74,8 +74,8 @@
                                 <label for="email_address">Email Address</label>
                                 <input type="email" class="form-control" formControlName="email_address" [ngClass]="{'is-invalid':form.get('email_address').touched && form.get('email_address').invalid}">
                                 <div *ngIf="form.get('email_address').touched && form.get('email_address').invalid" class="invalid-feedback">
-                                    <div *ngIf="form.get('email').errors.required">Email Name is required</div>
-                                    <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                                    <div *ngIf="form.get('email_address').errors.required">Email Name is required</div>
+                                    <div *ngIf="form.get('email_address').errors.email">Email must be a valid email Address</div>
                                 </div>
                             </div>
                             <div class="form-group ">
