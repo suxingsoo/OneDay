@@ -21,7 +21,7 @@ export class BusinfoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.buses = this.busesService.getBuses();
+    // this.buses = this.busesService.getBuses();
     console.log(this.buses);
   }
 
