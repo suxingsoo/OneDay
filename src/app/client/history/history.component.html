@@ -4,7 +4,7 @@
   style="background-color: #364ed9;"
 >
   <div class="container">
-    <a class="navbar-brand border border-light bg-light" routerLink="/"
+    <a class="navbar-brand border border-light bg-light" routerLink="/userhome"
       ><img src="../../assets/images/logo.png" height="40px" width="100%"
     /></a>
     <button
@@ -19,7 +19,7 @@
     </button>
     <div class="collapse navbar-collapse" id="main_nav">
       <ul class="navbar-nav ml-auto">
-        <p class="nav-item">
+        <p class="nav-item active">
           <a class="nav-link" routerLink="/client/history">History</a>
         </p>
         <div class="dropdown">
@@ -29,7 +29,6 @@
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
-            style="color: white;"
             aria-haspopup="true"
             aria-expanded="false"
           >
@@ -44,28 +43,24 @@
   </div>
 </nav>
 
-<!-- Buses -->
-<div class="parallax text-center">
-    <p class="display-1 font-weight-bold">Travel in our Care</p>
-    <!-- <p class="h3">Travel in our Care</p> -->
-  </div>
-  <br />
-  
-  <!-- Booking Form -->
-  <br />
-  
-  <!-- <div class="img-area mt-5 col-md-6">
-          <div class="img-area" *ngFor="let bus of buses">
-              <div class="single-img" data-toggle="modal" data-target="#bus1">
-                      {{bus.bus_name}} <img src="{{bus.img_url}}" alt="bus1" width="250px">
-              </div>
-          </div>
-      </div> -->
-  
-      <h2 class="text-center font-weight-bold">Our Buses</h2>
-
-<div *ngFor = "let bus of buses">
-  <app-businfo [bus]="bus"> </app-businfo>
-</div>
-
-<app-footer></app-footer>
+<table class=" table mt-2">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Bus Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Total Price</th>
+            <th scope="col">Payment Method</th>
+            <!-- <th s></th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr *ngFor = "let bus of buses">
+            <td>{{bus.bus_name}}</td>
+            <td>{{bus.payment}}</td>
+            <td>@mdo</td>
+          </tr> -->
+        </tbody>
+      </table>
+      
+      

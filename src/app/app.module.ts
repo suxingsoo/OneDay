@@ -24,6 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BusSpecsComponent } from './admin/bus-specs/bus-specs.component';
 import { UpdateUserComponent } from './admin/update-user/update-user.component';
 import { UpdateDriverComponent } from './admin/update-driver/update-driver.component';
+import { BookingFormComponent } from './client/booking-form/booking-form.component';
+import { BusinfoComponent } from './client/businfo/businfo.component';
+import { HistoryComponent } from './client/history/history.component';
 // import {MatIconModule} from '@angular/material/icon';
 
 
@@ -50,6 +53,9 @@ import { UpdateDriverComponent } from './admin/update-driver/update-driver.compo
     BusSpecsComponent,
     UpdateUserComponent,
     UpdateDriverComponent,
+    BookingFormComponent,
+    BusinfoComponent,
+    HistoryComponent,
   
   ],
   imports: [

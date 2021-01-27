@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bus } from '../../services/models';
-import { BusesService  } from '../../services/buses.service'
-import { Router, ActivatedRoute  } from '@angular/router';
+import { BusesService } from '../../services/buses.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import axios from 'axios';
 
@@ -16,45 +16,52 @@ export class UserHomeComponent implements OnInit {
     lastname: new FormControl('', Validators.required),
     address: new FormControl('', Validators.required),
     contact_number: new FormControl('', Validators.required),
-    email_address: new FormControl('', [
-      Validators.required,
-      Validators.email
-    ]),
+    email_address: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(8)
     ])
-
   });
   buses: Bus[];
 
   constructor(
     private busesService: BusesService,
     private router: Router,
-    private route : ActivatedRoute
-    ) { }
-  id:any;
+    private route: ActivatedRoute
+  ) {}
+  id: any;
   ngOnInit(): void {
+    // Backend side
     this.getBuses();
-    this.route.paramMap.subscribe(
-      params=> {
-        this.id = params.get('id');
-      }
-    );
+    this.route.paramMap.subscribe(params => {
+      this.id = params.get('id');
+    });
+
+    // this.buses = this.busesService.getBuses();
+    // console.log(this.buses);
   }
+  
   getBuses() {
+    //backend side
     this.busesService.getBuses().subscribe(buses => {
       this.buses = buses as Bus[];
       console.log(buses);
     })
+    // return this.busesService.getBuses;
   }
 
   booking() {
     console.log(this.form.value);
-    axios.post("https://btal-ride.herokuapp.com/api/client/booking/send/"+this.id, this.form.value).then(res=>{
-       this.router.navigate(['userhome']);
-        }).catch(err=>{
-            console.log(err)
-        })
+    axios
+      .post(
+        'https://btal-ride.herokuapp.com/api/client/booking/send/' + this.id,
+        this.form.value
+      )
+      .then(res => {
+        this.router.navigate(['userhome']);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 }

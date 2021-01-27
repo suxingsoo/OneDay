@@ -38,10 +38,10 @@ this.hidden = !this.hidden;
   }
 
   getBuses(){
-    this.busesService. getBuses().subscribe(buses => {
-      this.buses = buses as Bus[];
-      console.log(buses);
-    })
+    // this.busesService. getBuses().subscribe(buses => {
+    //   this.buses = buses as Bus[];
+    //   console.log(buses);
+    // })
   }
   update(id){
     this.router.navigate(['/admin/update-bus/'+id]);

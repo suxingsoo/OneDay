@@ -18,9 +18,10 @@ export class HomeComponent implements OnInit {
     this.getBuses()
   }
   getBuses() {
-    this.busesService.getBuses().subscribe(buses => {
-      this.buses = buses as Bus[];
-      console.log(buses);
-    })
+    //backend side
+    // this.busesService.getBuses().subscribe(buses => {
+    //   this.buses = buses as Bus[];
+    //   console.log(buses);
+    // })
   }
 }
