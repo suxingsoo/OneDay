@@ -2,24 +2,24 @@
     <div class="container-fluid ">
         <a class="navbar-brand border mb-2 mt-2 bg-white text-dark" routerLink="/"><img src="../../assets/images/logo.png" height="45px" width="auto"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+    <span class="navbar-toggler-icon"></span>
+    </button>
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav ml-auto">
                 <p class="nav-item">
-                    <a class="nav-link" routerLink="/client/landing-page">Home</a>
+                    <a class="nav-link" routerLink="/">Home</a>
                 </p>
                 <p class="nav-item">
-                    <a class="nav-link" routerLink="/client/history">History</a>
+                    <a class="nav-link" routerLink="/client/register">Sign Up</a>
                 </p>
-                <div class="dropdown">
-                    <button id="admin" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="tr" aria-expanded="false">
-                User
-              </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Sign Out</a>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/client/login">As a User</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLink="/admin/login">As an Admin</a>
                     </div>
-                </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -29,10 +29,10 @@
     <div>
         <p class="h1 story">Our Story</p>
         <svg height="80" width="400">
-                <g fill="none">
-                  <path stroke="white" stroke-width="6" d="M5 10 1200 0"/>
-                </g>
-        </svg>
+                    <g fill="none">
+                      <path stroke="white" stroke-width="6" d="M5 10 1200 0"/>
+                    </g>
+            </svg>
         <p class="tag">Bus Rental and Ride Corporation</p>
         <q>Enjoy the Ride with no Fear</q>
     </div>

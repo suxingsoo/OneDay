@@ -29,6 +29,7 @@ import { BusinfoComponent } from './client/businfo/businfo.component';
 import { HistoryComponent } from './client/history/history.component';
 import { LandingPageComponent } from './client/landing-page/landing-page.component';
 import { AboutComponent } from './client/about/about.component';
+import { AboutNotLoginComponent } from './client/about-not-login/about-not-login.component';
 // import {MatIconModule} from '@angular/material/icon';
 
 
@@ -59,7 +60,8 @@ import { AboutComponent } from './client/about/about.component';
     BusinfoComponent,
     HistoryComponent,
     LandingPageComponent,
-    AboutComponent  
+    AboutComponent,
+    AboutNotLoginComponent  
   ],
   imports: [
     BrowserModule,

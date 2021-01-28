@@ -23,6 +23,7 @@ import { HistoryComponent } from './client/history/history.component'
 import { BusinfoComponent } from './client/businfo/businfo.component';
 import { LandingPageComponent } from './client/landing-page/landing-page.component';
 import {AboutComponent } from "./client/about/about.component";
+import {AboutNotLoginComponent} from "./client/about-not-login/about-not-login.component"
 
 
 
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path : 'client/landing-page', component: LandingPageComponent},
   {path: 'client/about', component: AboutComponent},
   { path: 'client/register', component: RegisterComponent}, 
+  {path: 'about', component: AboutNotLoginComponent},
   { path: 'client/login', component: LoginComponent},
   { path:'client/booking',component:BookingFormComponent },
   {path: 'client/history', component:HistoryComponent},
