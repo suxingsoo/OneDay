@@ -188,3 +188,20 @@ button[type=submit] {
     text-shadow: 2px 2px black;
     color: white;
 }
+
+.bus {
+    font-size: 4vw;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+}
+.features h2{
+    text-align: center;
+    color: lightcoral;
+    padding: 1rem;
+}
+.hover:hover{
+    opacity: 0.9;
+    /* background-color: #3e8e41; */
+    color: blue;
+}

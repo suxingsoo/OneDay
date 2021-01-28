@@ -29,29 +29,31 @@
 
 <div class="container p-3 shadow p-3 mb-5 rounded" id="form">
     <p class=" h2 text-center font-weight-italic ">Reserve your Trip</p>
+
     <form name="form ">
         <div class="form-group">
             <label for="bus_name">Bus Name</label>
-            <input type="text" class="form-control" disabled placeholder="{{bus.bus_name}}">
+            <input type="text" class="form-control" name="bus_name" [ngModel]="bus_name">
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="sdate">Start Date</label>
-                <input type="date" name="sdate" id="sdate" class="form-control" />
+                <input type="date" id="sdate" class="form-control" name="sdate" [ngModel]="sdate">
             </div>
             <div class="form-group col-md-6">
                 <label for="edate">End Date</label>
-                <input type="date" name="edate" class="form-control" />
+                <input type="date" class="form-control" name="edate" [ngModel]="edate">
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="price">Price</label>
-                <input type="number" disabled name="price" id="" class="form-control" placeholder="{{bus.price}}" />
+                <input type="number" disabled name="price" id="" class="form-control">
             </div>
             <div class="form-group col-md-6">
                 <label for="payment">Payment Method</label>
-                <select name="payment" id="" class="form-control">
+                <select id="" class="form-control" name="payment" [ngModel]="payment">
           <option value="COD">Cash on Delivery</option>
           <option value="Paypay">Paypal</option>
           <option value="Paymaya">Paymaya</option>
