@@ -33,7 +33,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="sdate">Start Date</label>
-                <input type="date" name="sdate" id="" class="form-control" />
+                <input type="date" name="sdate" id="sdate" class="form-control" />
             </div>
             <div class="form-group col-md-6">
                 <label for="edate">End Date</label>
@@ -62,5 +62,18 @@
         </div>
     </form>
 </div>
+<!-- <script>
+    var sdate = document.getElementById('sdate').value;
+    alert(sdate);
+    var nd = new Date(sdate);
+
+    var dt = nd.getDate();
+    var mt = nd.getMonth() + 1;
+    var yt = nd.getFullYear();
+
+    var newdate = y + '-' + (m <= 9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+
+    document.write(newdate)
+</script> -->
 
 <app-footer></app-footer>

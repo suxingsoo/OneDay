@@ -28,4 +28,6 @@ export class BookingFormComponent implements OnInit {
   resetBtn(){
     // this.buses.reset()
   }
+
+ 
 }
