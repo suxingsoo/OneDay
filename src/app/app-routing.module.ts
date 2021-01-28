@@ -22,6 +22,7 @@ import { BookingFormComponent } from './client/booking-form/booking-form.compone
 import { HistoryComponent } from './client/history/history.component'
 import { BusinfoComponent } from './client/businfo/businfo.component';
 import { LandingPageComponent } from './client/landing-page/landing-page.component';
+import {AboutComponent } from "./client/about/about.component";
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   // { path: '/userhome', redirectTo: 'home', pathMatch: 'full' },
   { path:'',component:HomeComponent },
   {path : 'client/landing-page', component: LandingPageComponent},
+  {path: 'client/about', component: AboutComponent},
   { path: 'client/register', component: RegisterComponent}, 
   { path: 'client/login', component: LoginComponent},
   { path:'client/booking',component:BookingFormComponent },

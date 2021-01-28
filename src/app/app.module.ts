@@ -28,6 +28,7 @@ import { BookingFormComponent } from './client/booking-form/booking-form.compone
 import { BusinfoComponent } from './client/businfo/businfo.component';
 import { HistoryComponent } from './client/history/history.component';
 import { LandingPageComponent } from './client/landing-page/landing-page.component';
+import { AboutComponent } from './client/about/about.component';
 // import {MatIconModule} from '@angular/material/icon';
 
 
@@ -57,7 +58,8 @@ import { LandingPageComponent } from './client/landing-page/landing-page.compone
     BookingFormComponent,
     BusinfoComponent,
     HistoryComponent,
-    LandingPageComponent  
+    LandingPageComponent,
+    AboutComponent  
   ],
   imports: [
     BrowserModule,
