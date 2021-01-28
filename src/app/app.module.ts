@@ -27,6 +27,7 @@ import { UpdateDriverComponent } from './admin/update-driver/update-driver.compo
 import { BookingFormComponent } from './client/booking-form/booking-form.component';
 import { BusinfoComponent } from './client/businfo/businfo.component';
 import { HistoryComponent } from './client/history/history.component';
+import { LandingPageComponent } from './client/landing-page/landing-page.component';
 // import {MatIconModule} from '@angular/material/icon';
 
 
@@ -56,7 +57,7 @@ import { HistoryComponent } from './client/history/history.component';
     BookingFormComponent,
     BusinfoComponent,
     HistoryComponent,
-  
+    LandingPageComponent  
   ],
   imports: [
     BrowserModule,

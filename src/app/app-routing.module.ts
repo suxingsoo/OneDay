@@ -21,13 +21,14 @@ import { AddBusComponent } from './admin/add-bus/add-bus.component';
 import { BookingFormComponent } from './client/booking-form/booking-form.component';
 import { HistoryComponent } from './client/history/history.component'
 import { BusinfoComponent } from './client/businfo/businfo.component';
-// import { BusinfoComponent } from './client/businfo/businfo.component';
+import { LandingPageComponent } from './client/landing-page/landing-page.component';
 
 
 
 const routes: Routes = [
   // { path: '/userhome', redirectTo: 'home', pathMatch: 'full' },
   { path:'',component:HomeComponent },
+  {path : 'client/landing-page', component: LandingPageComponent},
   { path: 'client/register', component: RegisterComponent}, 
   { path: 'client/login', component: LoginComponent},
   { path:'client/booking',component:BookingFormComponent },
@@ -40,12 +41,12 @@ const routes: Routes = [
   { path: 'bookings', component: BookingsComponent },
   { path: 'buses', component: BusesComponent },
   { path: 'drivers', component: DriversComponent },
-  { path: 'user-profile', component: UserProfileComponent },git 
+  { path: 'user-profile', component: UserProfileComponent },
   { path:'update-bus/:id', component:UpdateBusComponent },
   { path:'update-user/:id', component:UpdateUserComponent },
   { path:'update-driver/:id', component:UpdateDriverComponent },
   { path:'add-bus', component:AddBusComponent },
-  { path: 'client/businfo', component: BusinfoComponentgit }
+  { path: 'client/businfo', component: BusinfoComponent }
   ]
 },
   ]
