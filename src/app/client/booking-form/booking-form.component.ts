@@ -10,6 +10,16 @@ import { BusesService } from '../../services/buses.service';
 export class BookingFormComponent implements OnInit {
   buses: Bus[];
 
+  bus_name: string;
+  price:number;
+  sdate: Date;
+  edate: Date;
+  payment:  number;
+
+  submit(data: any){
+
+  }
+
   constructor(
     private busesService: BusesService,
   ) { }

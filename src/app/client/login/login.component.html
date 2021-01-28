@@ -1,38 +1,69 @@
-<nav
-  id="navbar_top"
-  class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded"
-  style="background-color: #364ed9;"
->
-  <div class="container">
-    <a class="navbar-brand border border-light bg-light"routerLink="/"><img src="../../assets/images/logo.png" height="40px" width="100%"/></a>
-    <button class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#main_nav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border border-light bg-light" routerLink="/"><img src="../../assets/images/logo.png" height="40px" width="100%" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="main_nav">
-      <ul class="navbar-nav ml-auto">
-          <p class="nav-item">
-              <a class="nav-link"routerLink="/client/register">Sign Up</a>
-      </p>
-      <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Log In
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" routerLink="/client/login">As a User</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" routerLink="/admin/login">As an Admin</a>
-            </div>
-        </li>
-      </ul>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <p class="nav-item">
+                    <a class="nav-link" routerLink="/client/register">Sign Up</a>
+                </p>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/client/login">As a User</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLink="/admin/login">As an Admin</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
+
+
+<!-- <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border border-light bg-light" routerLink="/"><img src="../../assets/images/logo.png" height="40px" width="100%" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <p class="nav-item">
+                    <a class="nav-link" routerLink="/client/history">History</a>
+                </p>
+                <div class="dropdown">
+                    <button id="admn" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="true" aria-expanded="false">
+            User
+          </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" (click)="logout()">Sign Out</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="bg-img">
     <div class="container d-flex flex-column min-vh-100">
         <div class="row flex-grow-1 justify-content-center align-items-center">
@@ -42,9 +73,9 @@
                         <div class="text white text-center txt">L O G I N !</div>
                         <div class="d-flex justify-content-center">
                             <div class="spinner-border" role="status" style="display: none;" id="spinner">
-                              <span class="sr-only">Loading...</span>
+                                <span class="sr-only">Loading...</span>
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <!-- <img src="../../assets/images/image2.jpg"> -->
                     <div class="card-body">
