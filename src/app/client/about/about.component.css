@@ -34,3 +34,8 @@ q {
     padding-left: 15%;
     margin-top: -2rem
 }
+
+.about {
+    background-color: bisque;
+    padding: 10%
+}

@@ -1,21 +1,22 @@
-<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg mb-0 rounded rounded" style="background-color: #364ed9;height: 70px;">
-    <div class="container-fluid ">
-        <a class="navbar-brand border mb-2 mt-2 bg-white " routerLink="/"><img src="../../assets/images/logo.png" height="45px" width="auto"></a>
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border border-light bg-light" routerLink="/"><img src="../../assets/images/logo.png" height="40px" width="100%" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav ml-auto">
                 <p class="nav-item">
                     <a class="nav-link" routerLink="/userhome">Buses</a>
                 </p>
                 <p class="nav-item">
+                    <a class="nav-link" routerLink="/client/about">About</a>
+                </p>
+                <p class="nav-item">
                     <a class="nav-link" routerLink="/client/history">History</a>
                 </p>
                 <div class="dropdown">
-                    <button id="admin" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="tr" aria-expanded="false">
-            User
-          </button>
+                    <button id="admn" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="true" aria-expanded="false">User</button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="#">Sign Out</a>
                     </div>
